@@ -51,10 +51,13 @@ bool isButtonActivated() {
   Serial.print("Button: ");
 
   // TODO: Fix this logic and print the correct status
-  if (state == HIGH) {
-    // Button not pressed
+  if (buttonPin == LOW) {
+    serial.print("OFF");
+    digitalwrite(ledPin, HIGH);
     return false;
   } else {
+    serial.print("ON");
+    digitalwrite(ledPin, LOW);
     // Button pressed
     return true;
     delay(3000);
