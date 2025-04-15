@@ -57,7 +57,7 @@ bool isButtonActivated() {
     return false;
   } else {
     // Button pressed
-    Serial.print("OFF ");
+    Serial.print("ON ");
     return true;
   }
 
